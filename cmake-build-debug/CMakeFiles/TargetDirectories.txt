@@ -1,0 +1,5 @@
+/Users/maya/OneDrive - The City College of New York/CSC21200/assignments/Assignment6/cmake-build-debug/CMakeFiles/test.dir
+/Users/maya/OneDrive - The City College of New York/CSC21200/assignments/Assignment6/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/maya/OneDrive - The City College of New York/CSC21200/assignments/Assignment6/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/maya/OneDrive - The City College of New York/CSC21200/assignments/Assignment6/cmake-build-debug/CMakeFiles/exam.dir
+/Users/maya/OneDrive - The City College of New York/CSC21200/assignments/Assignment6/cmake-build-debug/CMakeFiles/main.dir
