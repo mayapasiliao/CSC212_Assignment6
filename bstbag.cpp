@@ -39,6 +39,18 @@ namespace data_structures_assignment6
          ** made to this pointer in the recursive call will directly change
          ** the right pointer in the root_ptr's node.
          */
+        binary_tree_node<Item>* oldroot_ptr;
+
+        if(root_ptr->right() == nullptr) {
+            removed = oldroot_ptr->data();      //The reference parameter, removed, has been set to a copy of the removed item.
+            oldroot_ptr = root_ptr;
+            root_ptr = root_ptr->left();
+            delete oldroot_ptr;
+        }
+
+        else {
+            bst_remove_max(root_ptr->right(), removed);
+        }
     }
 
     template<class Item>
@@ -117,11 +129,13 @@ namespace data_structures_assignment6
         if (root_ptr == nullptr)
         {   // Empty tree
             /* STUDENT WORK */
+            return 0;
         }
 
         if (target < root_ptr->data())
         {   // Continue looking in the left subtree
             /* STUDENT WORK */
+            bst
         }
 
         if (target > root_ptr->data())
