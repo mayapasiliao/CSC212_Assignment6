@@ -202,19 +202,21 @@ namespace data_structures_assignment6
             cursor = root_ptr;
             /* STUDENT WORK */
             bool done = false;
-            while(entry <= cursor->data()) {
-                cursor->left();
-                if(cursor->left() == nullptr) {
-                    cursor->left() = new binary_tree_node<Item>(entry);
+            while(!done) {
+                if(entry < cursor->data()) {
+                    if(cursor->left() == nullptr) {
+                        cursor->left() = new binary_tree_node<Item>(entry);
+                        done = true;
+                    }
+                    cursor = cursor->left();
                 }
-                done = true;
-            }
-            while(entry >= cursor->data()) {
-                cursor->right();
-                if(cursor->right() == nullptr) {
-                    cursor->right() = new binary_tree_node<Item>(entry);
+                if(entry > cursor->data()) {
+                    if(cursor->right() == nullptr) {
+                        cursor->right() = new binary_tree_node<Item>(entry);
+                        done = true;
+                    }
+                    cursor = cursor->right();
                 }
-                done = true;b
             }
         }
     }
