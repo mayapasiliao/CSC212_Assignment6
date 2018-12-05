@@ -42,8 +42,8 @@ namespace data_structures_assignment6
         binary_tree_node<Item>* oldroot_ptr;
 
         if(root_ptr->right() == nullptr) {
-            removed = oldroot_ptr->data();      //The reference parameter, removed, has been set to a copy of the removed item.
             oldroot_ptr = root_ptr;
+            removed = oldroot_ptr->data();      //The reference parameter, removed, has been set to a copy of the removed item.
             root_ptr = root_ptr->left();
             delete oldroot_ptr;
         }
@@ -135,12 +135,13 @@ namespace data_structures_assignment6
         if (target < root_ptr->data())
         {   // Continue looking in the left subtree
             /* STUDENT WORK */
-            bst
+            bst_remove_all(root_ptr->left(), target);
         }
 
         if (target > root_ptr->data())
         {   // Continue looking in the right subtree
             /* STUDENT WORK */
+            bst_remove_all(root_ptr->right(), target);
         }
 
         if (root_ptr->left() == nullptr)
@@ -160,7 +161,7 @@ namespace data_structures_assignment6
         // the maximum element that we moved up from our left subtree
         // might also be a copy of the target).
         /* STUDENT WORK */
-
+        bst_remove_max(root_ptr->left(), root_ptr->data());
     }
 
     template<class Item>
@@ -200,6 +201,21 @@ namespace data_structures_assignment6
         {   // Move down the tree and add a new leaf:
             cursor = root_ptr;
             /* STUDENT WORK */
+            bool done = false;
+            while(entry <= cursor->data()) {
+                cursor->left();
+                if(cursor->left() == nullptr) {
+                    cursor->left() = new binary_tree_node<Item>(entry);
+                }
+                done = true;
+            }
+            while(entry >= cursor->data()) {
+                cursor->right();
+                if(cursor->right() == nullptr) {
+                    cursor->right() = new binary_tree_node<Item>(entry);
+                }
+                done = true;b
+            }
         }
     }
 
