@@ -39,17 +39,17 @@ namespace data_structures_assignment6
          ** made to this pointer in the recursive call will directly change
          ** the right pointer in the root_ptr's node.
          */
-        binary_tree_node<Item>* oldroot_ptr;
+        binary_tree_node<Item>* max_node;
 
         if(root_ptr->right() == nullptr) {
-            oldroot_ptr = root_ptr;
-            removed = oldroot_ptr->data();      //The reference parameter, removed, has been set to a copy of the removed item.
+            removed = root_ptr->data();         //The reference parameter, removed, has been set to a copy of the removed item.
+            max_node = root_ptr->right();
             root_ptr = root_ptr->left();
-            delete oldroot_ptr;
+            delete max_node;
         }
 
         else {
-            bst_remove_max(root_ptr->right(), removed);
+            bst_remove_max(root_ptr->right());
         }
     }
 
@@ -162,6 +162,7 @@ namespace data_structures_assignment6
         // might also be a copy of the target).
         /* STUDENT WORK */
         bst_remove_max(root_ptr->left(), root_ptr->data());
+
     }
 
     template<class Item>
@@ -202,14 +203,16 @@ namespace data_structures_assignment6
             cursor = root_ptr;
             /* STUDENT WORK */
             bool done = false;
+
             while(!done) {
-                if(entry < cursor->data()) {
+                if(entry <= cursor->data()) {
                     if(cursor->left() == nullptr) {
                         cursor->left() = new binary_tree_node<Item>(entry);
                         done = true;
                     }
                     cursor = cursor->left();
                 }
+
                 if(entry > cursor->data()) {
                     if(cursor->right() == nullptr) {
                         cursor->right() = new binary_tree_node<Item>(entry);
@@ -229,6 +232,19 @@ namespace data_structures_assignment6
 
         cursor = root_ptr;
         /* STUDENT WORK */
+        while(cursor != nullptr) {
+            if(target == cursor->data()) {
+                answer++;
+            }
+
+            if(target <= cursor->data()) {
+                cursor->left();
+            }
+
+            else if(target > cursor->data()) {
+                cursor->right();
+            }
+        }
 
         return answer;
     }
