@@ -49,7 +49,7 @@ namespace data_structures_assignment6
         }
 
         else {
-            bst_remove_max(root_ptr->right());
+            bst_remove_max(root_ptr->right(),removed);
         }
     }
 
@@ -163,6 +163,7 @@ namespace data_structures_assignment6
         /* STUDENT WORK */
         bst_remove_max(root_ptr->left(), root_ptr->data());
 
+        bst_remove_all(root_ptr, target);
     }
 
     template<class Item>
