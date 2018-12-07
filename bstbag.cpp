@@ -239,11 +239,11 @@ namespace data_structures_assignment6
             }
 
             if(target <= cursor->data()) {
-                cursor->left();
+                cursor = cursor->left();
             }
 
             else if(target > cursor->data()) {
-                cursor->right();
+                cursor = cursor->right();
             }
         }
 
