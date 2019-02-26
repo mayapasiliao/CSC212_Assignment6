@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/maya/OneDrive - The City College of New York/CSC21200/assignments/Assignment6"
+CMAKE_SOURCE_DIR = "/Users/maya/school/CCNY Fall 2018/CSC212/assignments/Assignment6"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/maya/OneDrive - The City College of New York/CSC21200/assignments/Assignment6/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/maya/school/CCNY Fall 2018/CSC212/assignments/Assignment6/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/maya/OneDrive - The City College of New York/CSC21200/assignments/Assignment6/cmake-build-debug/CMakeFiles" "/Users/maya/OneDrive - The City College of New York/CSC21200/assignments/Assignment6/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/maya/school/CCNY Fall 2018/CSC212/assignments/Assignment6/cmake-build-debug/CMakeFiles" "/Users/maya/school/CCNY Fall 2018/CSC212/assignments/Assignment6/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/maya/OneDrive - The City College of New York/CSC21200/assignments/Assignment6/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/maya/school/CCNY Fall 2018/CSC212/assignments/Assignment6/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -124,19 +124,6 @@ test/fast:
 .PHONY : test/fast
 
 #=============================================================================
-# Target rules for targets named exam
-
-# Build rule for target.
-exam: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 exam
-.PHONY : exam
-
-# fast build rule for target.
-exam/fast:
-	$(MAKE) -f CMakeFiles/exam.dir/build.make CMakeFiles/exam.dir/build
-.PHONY : exam/fast
-
-#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -148,6 +135,19 @@ main: cmake_check_build_system
 main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
+
+#=============================================================================
+# Target rules for targets named exam
+
+# Build rule for target.
+exam: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 exam
+.PHONY : exam
+
+# fast build rule for target.
+exam/fast:
+	$(MAKE) -f CMakeFiles/exam.dir/build.make CMakeFiles/exam.dir/build
+.PHONY : exam/fast
 
 bagexam.o: bagexam.cpp.o
 
@@ -237,10 +237,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... test"
+	@echo "... main"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... exam"
-	@echo "... main"
 	@echo "... bagexam.o"
 	@echo "... bagexam.i"
 	@echo "... bagexam.s"

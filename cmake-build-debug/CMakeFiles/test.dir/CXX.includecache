@@ -1,0 +1,52 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/maya/school/CCNY Fall 2018/CSC212/assignments/Assignment6/bagtest.cpp
+cctype
+-
+iostream
+-
+cstdlib
+-
+bstbag.h
+/Users/maya/school/CCNY Fall 2018/CSC212/assignments/Assignment6/bstbag.h
+
+/Users/maya/school/CCNY Fall 2018/CSC212/assignments/Assignment6/bintree.cpp
+cassert
+-
+cstdlib
+-
+iomanip
+-
+iostream
+-
+bintree.h
+/Users/maya/school/CCNY Fall 2018/CSC212/assignments/Assignment6/bintree.h
+
+/Users/maya/school/CCNY Fall 2018/CSC212/assignments/Assignment6/bintree.h
+cstdlib
+-
+bintree.cpp
+/Users/maya/school/CCNY Fall 2018/CSC212/assignments/Assignment6/bintree.cpp
+
+/Users/maya/school/CCNY Fall 2018/CSC212/assignments/Assignment6/bstbag.cpp
+cassert
+-
+cstdlib
+-
+bstbag.h
+/Users/maya/school/CCNY Fall 2018/CSC212/assignments/Assignment6/bstbag.h
+
+/Users/maya/school/CCNY Fall 2018/CSC212/assignments/Assignment6/bstbag.h
+cstdlib
+-
+bintree.h
+/Users/maya/school/CCNY Fall 2018/CSC212/assignments/Assignment6/bintree.h
+bstbag.cpp
+/Users/maya/school/CCNY Fall 2018/CSC212/assignments/Assignment6/bstbag.cpp
+
